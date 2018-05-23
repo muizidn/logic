@@ -6,7 +6,6 @@
 __Success__
 ```json
 {
-    "apiVersion":"1.0",
     "status":"success",
     "data":{
         "id":1,
@@ -17,7 +16,6 @@ __Success__
 __Fail - User failable action__
 ```json
 {
-    "apiVersion":"1.0",
     "status": "fail",
     "data": {
         "password":"password can't empty"
@@ -27,9 +25,7 @@ __Fail - User failable action__
 __Error - Server failable action__
 ```json
 {
-    "apiVersion":"1.0",
     "status":"error",
-    "code": 404,
     "message":"Cannot access database",
 }
 ```
@@ -66,7 +62,6 @@ __HEADER__ Authorization: token, Content-Type: application/json
 Success
 ```json
 {
-    "apiVersion":"1.0",
     "status":"success",
     "data": [
         {
@@ -111,7 +106,6 @@ __GET__ *{{api}}/profile*
 __HEADER__ Authorization: token, Content-Type: application/json
 ```json
 {
-    "apiVersion":"1.0",
     "status":"success",
     "data": {
       "name": "String",
@@ -140,7 +134,6 @@ __GET__ *{{api}}/checkin?event={{event.id(UUID_String)}}*
 __HEADER__ Authorization: token, Content-Type: application/json
 ```json
 {
-    "apiVersion":"1.0",
     "status":"success",
     "data": {
         "event":"Kajian bulan Ramandhan",

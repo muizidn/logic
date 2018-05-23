@@ -2,18 +2,19 @@
 
 ## {{api}} = http://211.11.1.39/api
 
-### LOGIN 
-__POST__ *{{api}}/login?type=organizer/participant*
-
-Success
+### RESPONSE PATTERN
+__Success__
 ```json
 {
     "apiVersion":"1.0",
     "status":"success",
-    "key":"Bearer abc",
+    "data":{
+        "id":1,
+        "name":"Mosh"
+    }
 }
 ```
-Fail - User failable action
+__Fail - User failable action__
 ```json
 {
     "apiVersion":"1.0",
@@ -23,12 +24,35 @@ Fail - User failable action
     }
 }
 ```
-Error - Server failable action
+__Error - Server failable action__
 ```json
 {
     "apiVersion":"1.0",
     "status":"error",
+    "code": 404,
     "message":"Cannot access database",
+}
+```
+
+### REGISTER
+__POST__ *{{api}}/register?type=organizer/participant*
+```json
+{
+    "email":"abc@a.com",
+    "password":"wkwkwland",
+    "profile": {
+        "name":"Mosh"
+    }
+}
+```
+
+### LOGIN 
+__POST__ *{{api}}/login?type=organizer/participant*
+
+```json
+{
+    "email":"abc@a.com",
+    "password":"wkwkland"
 }
 ```
 
@@ -119,6 +143,7 @@ __HEADER__ Authorization: token, Content-Type: application/json
     "apiVersion":"1.0",
     "status":"success",
     "data": {
+        "event":"Kajian bulan Ramandhan",
         "participants": [
             {
                 "id":1,

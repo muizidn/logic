@@ -41,7 +41,7 @@ __POST__ *{{api}}/register?type=organizer/participant*
     }
 }
 ```
-
+__RESPONSE__
 ```json
 {
     "status":"success",

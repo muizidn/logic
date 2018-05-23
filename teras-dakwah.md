@@ -42,6 +42,19 @@ __POST__ *{{api}}/register?type=organizer/participant*
 }
 ```
 
+```json
+{
+    "status":"success",
+    "data": {
+        "name":"Mosh",
+        "email":"abc@a.com",
+        "date_birth": "",
+        "phone":"",
+        "address":""
+    }
+}
+```
+
 ### LOGIN 
 __POST__ *{{api}}/login?type=organizer/participant*
 

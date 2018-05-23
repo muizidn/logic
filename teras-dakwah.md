@@ -52,6 +52,16 @@ __POST__ *{{api}}/login?type=organizer/participant*
 }
 ```
 
+__RESPONSE__
+```json
+{
+    "status": "success",
+    "data": {
+        "key": "Bearer {{token}}"
+    }
+}
+```
+
 ### LOGOUT
 __POST__ *{{api}}/logout*
 __HEADER__ Authorization: token
@@ -98,6 +108,26 @@ __HEADER__ Authorization: token, Content-Type: application/json
     "date":"20-12-2012",
     "address":"Mecca, Saudi Arabia",
     "content":"Kajian mengenai adab terhadap orang tua"
+}
+```
+__RESPONSE__
+```json
+{
+    "status":"success",
+    "data": {
+        "event":"Kajian bulanan",
+        "date":"20-12-2012",
+        "address":"Mecca, Saudi Arabia",
+        "content":"Kajian mengenai adab terhadap orang tua",
+        "preacher": {
+            "name": "User",
+            "date_birth": "12-12-2012",
+            "email": "abc@def.com",
+            "phone": "082878341703",
+            "address": "Jogja"
+        },
+        "participants": []
+    }
 }
 ```
 

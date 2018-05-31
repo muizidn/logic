@@ -183,13 +183,20 @@ __HEADER__ Authorization: token, Content-Type: application/json
         "participants": [
             {
                 "id":1,
-                "qr_code": "hashed_encoded",
-                "id_code":"generated_id"
+                "qr_code": "81d573b187606082a0d0027d... (sha256)",
+                "user": {
+                    "name":"Marzuki",
+                    "date_birth": "12-12-2012"
+                }
+            },{
+                "id":2,
+                "qr_code": "793d47112fbc60bdbc6739... (sha256)",
+                "user": {
+                    "name":"DeathStar",
+                    "date_birth": "12-12-2013"
+                }
             }
         ]
     }
 }
 ```
-
-
-

@@ -56,7 +56,7 @@ __RESPONSE__
 ```
 
 ### LOGIN 
-__POST__ *{{api}}/login
+__POST__ *{{api}}/login*
 
 ```json
 {
@@ -169,6 +169,19 @@ __HEADER__ Authorization: token, Content-Type: application/json
     "email": "abc@def.com",
     "phone": "082878341703",
     "address": "Jogja"
+}
+```
+
+### EVENT REGISTRATION
+__POST__ *{{api}}/event/{{event.id(UUID_String)}}/register*
+__HEADER__ Authorization: token, Content-Type: application/json
+```json
+{
+    "status":"success",
+    "data": {
+        "id":"UUID EVENT",
+        "email":"participant email"
+    }
 }
 ```
 

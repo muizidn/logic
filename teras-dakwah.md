@@ -56,7 +56,7 @@ __RESPONSE__
 ```
 
 ### LOGIN 
-__POST__ *{{api}}/login?type=organizer/participant*
+__POST__ *{{api}}/login
 
 ```json
 {

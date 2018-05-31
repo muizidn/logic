@@ -177,10 +177,17 @@ __POST__ *{{api}}/event/{{event.id(UUID_String)}}/register*
 __HEADER__ Authorization: token, Content-Type: application/json
 ```json
 {
+    "id":"UUID EVENT",
+    "email":"participant email"
+}
+```
+
+__RESPONSE__
+```json
+{
     "status":"success",
     "data": {
-        "id":"UUID EVENT",
-        "email":"participant email"
+        "message":"QR Code has been sent to your email!"
     }
 }
 ```
